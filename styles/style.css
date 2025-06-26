@@ -65,7 +65,7 @@
   display: block;
   inline-size: 100%;
   aspect-ratio: 1 / 1;
-  outline: 2px solid var(--accent-color, #000);
+  outline: 2px solid var(--contour-color, #000);
   outline-offset: -2px;
 }
 
@@ -121,7 +121,7 @@
 }
 
 .content {
-  border: 2px solid var(--accent-color, #000);
+  border: 2px solid var(--contour-color, #000);
   border-block-start: none;
   padding: 25px;
 }
