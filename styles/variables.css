@@ -4,8 +4,10 @@
         --font-family: Inter;
         --accent-font-family:  PressStart2P;
         --text-weight: 400;
+        --heading-weight: 700;
+        --title-font-size: clamp(0.875rem, 0.226rem + 2.7692cqi, 1.4375rem);
         --card-width: clamp(23.188rem, 15.958rem + 30.159vw, 43.5rem);
-        --stroke-color: rgb(255 255 255 / 0.5);
+        --text-shadow: rgb(255 255 255 / 0.5);
         --text-color:#000;
         --background-img: repeating-linear-gradient(to bottom, #d3d3d3 0 2px, rgb(211 211 211 / 0) 2px 4px),
             repeating-linear-gradient(to right, #d3d3d3 0 2px, rgb(211 211 211 / 0) 2px 4px),
