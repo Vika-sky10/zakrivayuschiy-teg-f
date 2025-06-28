@@ -178,6 +178,7 @@
   cursor: pointer;
   outline: 2px solid transparent;
   transition: outline 0.3s linear;
+  color: currentColor;
 }
 
 .button::before {
@@ -299,6 +300,16 @@
   inline-size: 257px;
 }
 
+.save-icon {
+  inline-size: 21px;
+  block-size: 21px;
+}
+
+.dialog-save-icon {
+  inline-size: 39px;
+  block-size: 39px;
+}
+
 @supports ((text-stroke: 1px #fff) or (-webkit-text-stroke: 1px #fff)) {
   .image-text {
     text-shadow: none;
@@ -306,7 +317,7 @@
   }
 }
 
-@media (width< 375px) {
+@media (width>375px) {
 
   .main-end-button {
     inline-size: 355px;
