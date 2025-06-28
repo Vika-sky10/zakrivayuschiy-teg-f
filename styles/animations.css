@@ -25,7 +25,7 @@
 
 .like-icon:hover .main-body {
   fill: var(--contour-color);
-  transition-delay: 0.03s;
+  transition-delay: 0.05s;
 }
 
 .like-icon:not(:hover) .core {
@@ -61,15 +61,15 @@
 }
 
 .like-icon.is-liked .heart {
-  animation: pulse 0.3s ease-in-out 0.06s 1 forwards;
+  animation: fadeIn 0.3s ease-in-out 0.06s 1 forwards;
   transform-origin: center;
 }
 
 .like-icon.is-liked .sparks {
-  animation: spark 0.3s ease-in-out 0.12s 1 forwards;
+  animation: slideInFromLeft 0.3s ease-in-out 0.12s 1 forwards;
 }
 
-@keyframes pulse {
+@keyframes fadeIn {
   0% {
     transform: scale(1);
   }
@@ -81,7 +81,7 @@
   }
 }
 
-@keyframes spark {
+@keyframes slideInFromLeft {
   0% {
     fill: none;
   }
