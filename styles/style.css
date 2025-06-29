@@ -136,8 +136,6 @@
 }
 
 .button__text, .dialog_text {
-  font-family: var(--accent-font-family), fantasy;
-  font-size: 14px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -267,7 +265,7 @@
 }
 
 .dialog_text {
-  line-height: 150%;
+  line-height: 135%;
 }
 
 .uppercase, .dialog_text {
@@ -330,5 +328,10 @@
 
   .posts {
   inline-size: 100%;
+  }
+
+  .save-icon {
+    inline-size: 28px;
+    block-size: 28px;
   }
 }
