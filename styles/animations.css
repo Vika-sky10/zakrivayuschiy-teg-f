@@ -7,17 +7,21 @@
 ✦ card__icon-button — для кнопки, оборачивающей иконку
 ✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
 ✦ button__text — для обозначения текстового элемента внутри кнопки
-
-*//*
-.main-body, .core, .sparks {
-  fill: transparent;
-  transition: fill 0.3s linear;
-  transition-delay: 0s;
-}
+*/
 
 .contour {
   transition: fill 0.1s linear;
-}*/
+}
+
+.like-icon .core {
+  fill: transparent;
+  transition: fill 0.3s linear 0.03s;
+}
+
+.like-icon .main-body {
+  fill: transparent;
+  transition: fill 0.3s linear 0.05s;
+}
 
 .like-icon:hover .core {
   fill: var(--contour-color);
@@ -29,11 +33,6 @@
   transition: fill 0.3s linear 0.05s;
 }
 
-.like-icon:not(:hover) .core {
-  transition: fill 0.3s linear 0.03s;
-  fill: transparent;
-}
-
 .like-icon:active .core {
   fill: var(--animation-fill-color);
   transition: fill 0.3s linear;
@@ -42,10 +41,6 @@
 .like-icon:active .main-body {
   fill: var(--animation-fill-color);
   transition: fill 0.3s linear 0.05s;
-}
-
-.like-icon:not(:active) .core {
-  transition: fill 0.3s linear 0.03s;
 }
 
 .like-icon.is-liked .core {
@@ -59,8 +54,8 @@
 }
 
 .like-icon.is-liked .contour {
-  fill: var(--animation-fill-color);
-  transition: fill 0.1s linear 0.06s;
+  fill: var(--animation-fill-color);  
+  transition: fill 0.3s linear 0.06s;
 }
 
 .like-icon.is-liked .heart {

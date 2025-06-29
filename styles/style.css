@@ -21,7 +21,7 @@
 }
 
 .header {
-  inline-size: min(100vi, 700px);
+  width: clamp(375px, 100%, 700px);
   margin: 100px auto;
   font-family: var(--accent-font-family), fantasy;
   border: 2px solid #000;
@@ -47,6 +47,7 @@
   display: grid;
   inline-size: min(100vi, 700px);
   margin: 100px auto 50px;
+  width: clamp(375px, 100%, 700px);
 }
 
 .post {
@@ -175,9 +176,10 @@
   outline: 2px solid transparent;
   transition: outline 0.3s linear;
   color: currentColor;
+  box-shadow: 2px 2px 0 transparent;
 }
 
-.card__like-button::before {
+.button::before {
  content: "";
   position: absolute;
   inset: 0;
@@ -206,10 +208,12 @@
   height: 38px;
   border: 2px solid  transparent ;
   padding: 0;
+  display: flex;
+  background-color: #fff;
 }
 
 .card__icon-button:focus-visible {
-  outline: 2px solid red;
+  border: 2px solid red;
 }
 
 .like-icon {
@@ -235,11 +239,6 @@
   flex-direction: column;
   inline-size: 306px;
   margin: 0 auto 100px;
-}
-
-.text_in_button {
-  font-size: 14px;
-  color: inherit;
 }
 
 .dialog-id[open] {
@@ -271,7 +270,7 @@
   line-height: 150%;
 }
 
-.uppercase {
+.uppercase, .dialog_text {
   text-transform: uppercase;
 }
 
@@ -285,13 +284,13 @@
 }
 
 .dialog-button {
-  padding: 12px 0;
+  padding: 10px 0;
   inline-size: 257px;
 }
 
 .save-icon {
-  inline-size: 28px;
-  block-size: 28px;
+  inline-size: 21px;
+  block-size: 21px;
 }
 
 .dialog-save-icon {
@@ -309,8 +308,7 @@
 @media (width>375px) {
 
   .save-button {
-    inline-size: 355px;
-    display: flex;
+    inline-size: 335px;
     flex-direction: row;
     gap: 10px;
   }
