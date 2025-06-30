@@ -145,7 +145,7 @@
   text-transform: lowercase;
 }
 
-.like-icon:focus, .card__icon-button:focus, .card__like-button:focus {
+.card__icon-button:focus, .button:focus {
   outline: none;
 }
 
@@ -175,6 +175,7 @@
   transition: outline 0.3s linear;
   color: currentColor;
   box-shadow: 2px 2px 0 transparent;
+  transition: box-shadow 0.3s linear;
 }
 
 .button::before {
@@ -194,6 +195,11 @@
   transform: scaleX(1);
 }
 
+.button:focus-visible {
+  box-shadow: 2px 2px 0 var(--contour-color, #000);
+  transition: box-shadow 0.3s ease;
+}
+
 .buttons {
   display: flex;
   justify-content: flex-end;
@@ -204,14 +210,15 @@
 .card__icon-button {
   width: 38px;
   height: 38px;
-  border: 2px solid  transparent ;
+  border: 2px solid  transparent;
+  transition: border 0.3s linear;
   padding: 0;
   display: flex;
   background-color: #fff;
 }
 
 .card__icon-button:focus-visible {
-  border: 2px solid red;
+  border: 2px solid #000;
 }
 
 .like-icon {
@@ -222,12 +229,6 @@
 .card__like-button {
   width: 130px;
   height: 38px;
-  transform-origin: center
-}
-
-.card__like-button:focus-visible {
-  box-shadow: 2px 2px 0 var(--contour-color, #000);
-  transition: box-shadow 0.3s ease;
 }
 
 .save-button {
