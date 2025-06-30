@@ -172,10 +172,9 @@
   font-size: 14px;
   cursor: pointer;
   outline: 2px solid transparent;
-  transition: outline 0.3s linear;
   color: currentColor;
   box-shadow: 2px 2px 0 transparent;
-  transition: box-shadow 0.3s linear;
+  transition: box-shadow 0.3s linear, outline 0.3s linear;
 }
 
 .button::before {
